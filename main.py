@@ -1,12 +1,3 @@
-# terranova_quantamental_v1.py
-"""
-TerraNova Quantamental v1.0
-- Asset-class picking: quantpedia-style 12m momentum rotational (pick top N ETFs monthly)
-- Inside-class stock scoring: quant + fundamental factors fused into TerraNovaAlpha
-- Outputs ranked ETFs (asset classes) and top stocks per chosen class.
-Run locally (requires internet for yfinance).
-"""
-
 import yfinance as yf
 import pandas as pd
 import numpy as np
@@ -213,3 +204,4 @@ for cls, df in final_recommendations.items():
     df_to_save.to_csv(f"terranova_{cls.replace(' ','_')}_scores.csv")
 
 print("\nDone. CSVs saved for each class.")
+
